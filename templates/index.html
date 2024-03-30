@@ -1,0 +1,14 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <h1>{% block title %} BIENVENIDO A MI WEB {% endblock %}</h1>
+    {% for client in clientes %}
+        <a href="#">
+            <h2>{{ client['name']}} {{ client['lastname'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ client['created'] }}</span>
+        <hr>
+    {% endfor %}
+
+
+{% endblock %}
